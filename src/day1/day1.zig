@@ -4,7 +4,7 @@ pub fn day1() !void {
     var leftIds = std.ArrayList(i32).init(std.heap.page_allocator);
     var rightIds = std.ArrayList(i32).init(std.heap.page_allocator);
 
-    const file = try std.fs.cwd().openFile("./src//day1/input.txt", .{});
+    const file = try std.fs.cwd().openFile("./src/day1/input.txt", .{});
     defer file.close();
 
     while(try file.reader().readUntilDelimiterOrEofAlloc(std.heap.page_allocator, '\n', std.math.maxInt(usize))) |line| {
